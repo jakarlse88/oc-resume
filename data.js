@@ -43,3 +43,18 @@ const experience = [
 		}
 	}
 ];
+
+const references = [
+	{
+		name: "John Smith",
+		title: "Director - ACME, Inc.",
+		phone: "111 222 333",
+		email: "john.smith@acme.com"
+	},
+	{
+		name: "John Smith",
+		title: "Director - ACME, Inc.",
+		phone: "111 222 333",
+		email: "john.smith@acme.com"
+	}
+];

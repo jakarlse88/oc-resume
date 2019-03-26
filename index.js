@@ -30,7 +30,7 @@ const renderEducation = data => {
                     </div>
                 </div>
             </section>
-    `;
+        `;
 	});
 
 	// Render result
@@ -63,12 +63,32 @@ const renderExperience = data => {
                     </div>
                 </div>
             </section>
-    `;
+        `;
 	});
 
 	// Render result
 	render(template, document.querySelector("#experience"));
 };
 
+const renderReferences = data => {
+	let template = `<header class="article-header">
+            <h2 class="article-heading">
+                References
+            </h2>
+        </header>`;
+
+	data.map(item => {
+		template += `<section class="reference-item">
+            <p class="reference-name">${item.name}</p>
+            <p class="reference-info">${item.title}</p>
+            <p class="reference-info">${item.phone}</p>
+            <p class="reference-info">${item.email}</p>
+        </section>`;
+	});
+
+	render(template, document.querySelector("#references"));
+};
+
 renderEducation(education);
 renderExperience(experience);
+renderReferences(references);
