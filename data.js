@@ -58,3 +58,18 @@ const references = [
 		email: "john.smith@acme.com"
 	}
 ];
+
+const biography = {
+	name: "Jon Karlsen",
+	title: "Back-End Web Developer",
+	avatar: "https://via.placeholder.com/150",
+	contact: {
+		address: "Somewheretown, Europe",
+		phone: "123 456 789",
+		email: "jon@somewhere.com",
+		website: "github.com/jakarlse88",
+		skype: "@jon"
+	},
+	aboutMe:
+		"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil, corporis dolores doloribus id quo soluta a aliquid temporibus dolore recusandae, non voluptates dolor tenetur, cupiditate optio rerum maiores sit? Voluptatum qui ex, consectetur unde deleniti earum porro ad voluptatem deserunt ratione temporibus sit illo vel. Nulla sint quidem ipsum tenetur?"
+};

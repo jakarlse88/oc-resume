@@ -4,6 +4,14 @@ const render = (template, node) => {
 	node.innerHTML = template;
 };
 
+const renderHeading = data => {
+	const element = document.querySelector("#header");
+
+	const template = `<h1>${data.name}</h1><p>${data.title}</p>`;
+
+	render(template, element);
+};
+
 const renderEducation = data => {
 	let template = `<header class="article-header">
             <h2 class="article-heading">
@@ -89,6 +97,45 @@ const renderReferences = data => {
 	render(template, document.querySelector("#references"));
 };
 
+const renderAvatar = data => {
+	const element = document.querySelector("#avatar");
+
+	const template = `<img src="${
+		data.avatar
+	}" alt="Image of Jon Karlsen" />`;
+
+	render(template, element);
+};
+
+const renderContactInfo = data => {
+	const element = document.querySelector("#bio-contact");
+
+	let template = `<h2>Contact</h2>`;
+
+	Object.keys(data).forEach(item => {
+		const heading = item.charAt(0).toUpperCase() + item.substr(1);
+		const text = data[item];
+
+		template += `<h5>${heading}</h5><p>${text}</p>`;
+	});
+
+	render(template, element);
+};
+
+const renderAboutMe = data => {
+	const element = document.querySelector("#bio-about");
+
+	let template = `<h2>About Me</h2><p>${data.aboutMe}</p>`;
+
+	render(template, element);
+};
+
+// TODO: refactor render functions to find DOM element at the top of the function
+
+renderHeading(biography);
 renderEducation(education);
 renderExperience(experience);
 renderReferences(references);
+renderAvatar(biography);
+renderContactInfo(biography.contact);
+renderAboutMe(biography);
