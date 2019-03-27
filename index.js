@@ -1,18 +1,20 @@
-const render = (template, node) => {
+const _render = (template, node) => {
 	if (!node) return;
 
 	node.innerHTML = template;
 };
 
-const renderHeading = data => {
+const _renderHeading = data => {
 	const element = document.querySelector("#header");
 
 	const template = `<h1>${data.name}</h1><p>${data.title}</p>`;
 
-	render(template, element);
+	_render(template, element);
 };
 
-const renderEducation = data => {
+const _renderEducation = data => {
+	const element = document.querySelector("#education");
+
 	let template = `<header class="article-header">
             <h2 class="article-heading">
                 Education
@@ -41,11 +43,12 @@ const renderEducation = data => {
         `;
 	});
 
-	// Render result
-	render(template, document.querySelector("#education"));
+	_render(template, element);
 };
 
-const renderExperience = data => {
+const _renderExperience = data => {
+	const element = document.querySelector("#experience");
+
 	let template = `<header class="article-header">
             <h2 class="article-heading">
                 Experience
@@ -74,43 +77,50 @@ const renderExperience = data => {
         `;
 	});
 
-	// Render result
-	render(template, document.querySelector("#experience"));
+	_render(template, element);
 };
 
-const renderReferences = data => {
+const _renderReferences = data => {
+	const element = document.querySelector("#references");
+
 	let template = `<header class="article-header">
-            <h2 class="article-heading">
+            <h2 class="article-heading" id="references-heading">
                 References
             </h2>
-        </header>`;
+        </header>
+        <div class="references-container" aria-hidden="true">
+        `;
 
 	data.map(item => {
-		template += `<section class="reference-item">
+		template += `<article class="reference-item">
             <p class="reference-name">${item.name}</p>
             <p class="reference-info">${item.title}</p>
             <p class="reference-info">${item.phone}</p>
             <p class="reference-info">${item.email}</p>
-        </section>`;
+        </article>`;
 	});
 
-	render(template, document.querySelector("#references"));
+	template += "</div>";
+
+	_render(template, element);
 };
 
-const renderAvatar = data => {
-	const element = document.querySelector("#avatar");
+const _renderAvatar = data => {
+	const element = document.querySelector("#avatar-container");
 
 	const template = `<img src="${
 		data.avatar
-	}" alt="Image of Jon Karlsen" />`;
+	}" alt="Image of Jon Karlsen" class="avatar" />`;
 
-	render(template, element);
+	_render(template, element);
 };
 
-const renderContactInfo = data => {
+const _renderContactInfo = data => {
 	const element = document.querySelector("#bio-contact");
 
-	let template = `<h2>Contact</h2>`;
+	let template = `<h2 class="sidebar-heading">Contact</h2>`;
+
+	template += `<div aria-hidden="true" class="bio-contact-container">`;
 
 	Object.keys(data).forEach(item => {
 		const heading = item.charAt(0).toUpperCase() + item.substr(1);
@@ -119,23 +129,31 @@ const renderContactInfo = data => {
 		template += `<h5>${heading}</h5><p>${text}</p>`;
 	});
 
-	render(template, element);
+	template += `</div>`;
+
+	_render(template, element);
 };
 
-const renderAboutMe = data => {
+const _renderAboutMe = data => {
 	const element = document.querySelector("#bio-about");
 
-	let template = `<h2>About Me</h2><p>${data.aboutMe}</p>`;
+	let template = `<h2 class="sidebar-heading">About Me</h2>`;
 
-	render(template, element);
+	template += `<div aria-hidden="true" class="bio-about-container"><p>${
+		data.aboutMe
+	}</p></div>`;
+
+	_render(template, element);
 };
 
-// TODO: refactor render functions to find DOM element at the top of the function
+const renderContents = (function(data) {
+	const { biography, education, experience, references } = data;
 
-renderHeading(biography);
-renderEducation(education);
-renderExperience(experience);
-renderReferences(references);
-renderAvatar(biography);
-renderContactInfo(biography.contact);
-renderAboutMe(biography);
+	_renderHeading(biography);
+	_renderEducation(education);
+	_renderExperience(experience);
+	_renderReferences(references);
+	_renderAvatar(biography);
+	_renderContactInfo(biography.contact);
+	_renderAboutMe(biography);
+})(data);
