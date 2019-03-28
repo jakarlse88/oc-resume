@@ -70,6 +70,7 @@ const data = {
 			skype: "@jon"
 		},
 		aboutMe:
-			"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil, corporis dolores doloribus id quo soluta a aliquid temporibus dolore recusandae, non voluptates dolor tenetur, cupiditate optio rerum maiores sit? Voluptatum qui ex, consectetur unde deleniti earum porro ad voluptatem deserunt ratione temporibus sit illo vel. Nulla sint quidem ipsum tenetur?"
+			"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil, corporis dolores doloribus id quo soluta a aliquid temporibus dolore recusandae, non voluptates dolor tenetur, cupiditate optio rerum maiores sit? Voluptatum qui ex, consectetur unde deleniti earum porro ad voluptatem deserunt ratione temporibus sit illo vel. Nulla sint quidem ipsum tenetur?",
+		hobbies: ["fa-running", "fa-book", "fa-laptop-code"]
 	}
 };

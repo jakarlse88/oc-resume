@@ -170,6 +170,23 @@ const _renderAboutMe = data => {
 	_render(template, element);
 };
 
+const _renderHobbies = data => {
+	const element = document.querySelector("#bio-hobbies");
+
+	let template = `<div class="hobbies-container" aria-hidden="true">
+            <h2 class="sidebar-heading">Hobbies</h2>
+            <div class="icon-container" aria-hidden="true">
+            `;
+
+	data.forEach(item => {
+		template += `<i class="fa fa-3x ${item} hobby-icon"></i>`;
+	});
+
+	template += `</div></div>`;
+
+	_render(template, element);
+};
+
 const renderContents = (function(data) {
 	const { biography, education, experience, references } = data;
 
@@ -180,4 +197,5 @@ const renderContents = (function(data) {
 	_renderAvatar(biography);
 	_renderContactInfo(biography.contact);
 	_renderAboutMe(biography);
+	_renderHobbies(biography.hobbies);
 })(data);
