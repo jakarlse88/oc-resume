@@ -106,7 +106,12 @@ body {
 	border-bottom: 2px solid #fdd800;
 }
 
+.main {
+	color: #424242;
+}
+
 .main-article-heading {
+	color: black;
 	font-size: 2em;
 	text-transform: uppercase;
 }
@@ -123,4 +128,56 @@ body {
 	width: 100%;
 	padding-top: 20px;
 	border-bottom: 2px solid #fdd800;
+}
+
+.article {
+	display: grid;
+	grid-template-columns: 5% 20% 75%;
+	grid-template-rows: 25% 75%;
+	grid-template-areas:
+		"icon date body"
+		". . body";
+}
+
+.article-icon {
+	grid-area: icon;
+	justify-self: center;
+	align-self: center;
+	color: #fdd800;
+}
+
+.article-date {
+	grid-area: date;
+}
+
+.article-body {
+	grid-area: body;
+}
+
+.article-date > p:nth-child(2) {
+	margin-top: 0;
+}
+
+.article-body-subheading {
+	font-size: 1.3em;
+	text-transform: uppercase;
+}
+
+.article-body-subtitle {
+	margin-top: 0;
+}
+
+.references-container {
+	display: grid;
+	grid-template-columns: repeat(2, 50%);
+	grid-template-rows: auto;
+	padding-bottom: 2em;
+}
+
+.reference-name {
+	text-transform: uppercase;
+}
+
+.reference-info {
+	margin-top: 0;
 }

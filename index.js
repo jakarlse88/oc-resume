@@ -26,25 +26,34 @@ const _renderEducation = data => {
             </h2>
         </header>`;
 
-	data.map(item => {
+	data.map((item, index) => {
 		template += `
-            <section class="article-body">
-                <div class="sub-article">
-                    <h4 class="body-subheading">
+            <article class="article">
+                <div aria-hidden="true" class="article-icon">`;
+
+		if (index === 0) {
+			template += `<i class="far fa-dot-circle"></i>`;
+		} else {
+			template += `<i class="fas fa-circle"></i>`;
+		}
+
+		template += `</div>
+                <div class="article-date" aria-hidden="true">
+                    <p>${item.articleDate.date}</p>
+                    <p>${item.articleDate.place}</p>
+                </div>
+                <div class="article-body">
+                    <h4 class="article-body-subheading">
                         ${item.institution}
                     </h4>
-                    <p class="body-subheading-subtitle">
+                    <p class="article-body-subtitle">
                         ${item.subheading}
                     </p>
-                    <p class="body-text">
+                    <p class="article-body-text">
                         ${item.bodyText}
                     </p>
-                    <div class="article-date">
-                        <p>${item.articleDate.date}</p>
-                        <p>${item.articleDate.place}</p>
-                    </div>
                 </div>
-            </section>
+            </article>
         `;
 	});
 
@@ -61,25 +70,33 @@ const _renderExperience = data => {
             </h2>
         </header>`;
 
-	data.map(item => {
+	data.map((item, index) => {
 		template += `
-            <section class="article-body">
-                <div class="sub-article">
-                    <h4 class="body-subheading">
-                        ${item.institution}
+            <article class="article">
+                <div aria-hidden="true" class="article-icon">`;
+
+		if (index === 0) {
+			template += `<i class="far fa-dot-circle"></i>`;
+		} else {
+			template += `<i class="fas fa-circle"></i>`;
+		}
+
+		template += `</div>
+                <div aria-hidden="true" class="article-date">
+                    <p>${item.articleDate.date}</p>
+                    <p>${item.articleDate.place}</p>
+                </div>
+                <div aria-hidden="true" class="article-body">
+                    <h4 class="article-body-subheading">
+                    ${item.institution}
                     </h4>
-                    <p class="body-subheading-subtitle">
+                    <p class="article-body-subtitle">
                         ${item.subheading}
                     </p>
-                    <p class="body-text">
+                    <p class="article-body-text">
                         ${item.bodyText}
                     </p>
-                    <div class="article-date">
-                        <p>${item.articleDate.date}</p>
-                        <p>${item.articleDate.place}</p>
-                    </div>
-                </div>
-            </section>
+            </article>
         `;
 	});
 
