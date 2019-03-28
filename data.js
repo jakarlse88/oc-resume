@@ -58,12 +58,13 @@ const data = {
 		}
 	],
 	biography: {
-		name: "Jon Karlsen",
+		firstName: "Jon",
+		lastName: "Karlsen",
 		title: "Back-End Web Developer",
 		avatar: "https://via.placeholder.com/250",
 		contact: {
 			address: "Somewheretown, Europe",
-			phone: "123 456 789",
+			phone: "+47 123 45 678",
 			email: "jon@somewhere.com",
 			website: "github.com/jakarlse88",
 			skype: "@jon"

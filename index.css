@@ -13,17 +13,19 @@ body {
 	grid-template-areas: "sidebar main";
 }
 
+/*
+ * Sidebar
+ */
 .sidebar {
 	background-color: #fdd800;
 	color: #424242;
 }
 
-.main {
-}
-
 .avatar {
 	display: block;
-	margin: auto;
+	margin: 3em auto auto;
+	border-radius: 50%;
+	border: 3px solid rgba(169, 169, 169, 0.6);
 }
 
 .bio-info {
@@ -45,12 +47,6 @@ body {
 	font-size: 1.3em;
 }
 
-.avatar {
-	margin-top: 3em;
-	border-radius: 50%;
-	border: 3px solid rgba(169, 169, 169, 0.6);
-}
-
 .bio-contact-container {
 	width: 90%;
 	margin: auto 1.5em;
@@ -59,4 +55,72 @@ body {
 .bio-about-container {
 	width: 90%;
 	margin: auto 1.5em;
+}
+
+.contact-subheading {
+	font-size: 1em;
+	font-weight: normal;
+}
+
+.contact-paragraph {
+	margin-top: 0;
+}
+
+/*
+ * Main
+ */
+.main {
+	width: 90%;
+	margin: auto;
+}
+
+.main-heading {
+	text-transform: uppercase;
+	font-weight: normal;
+	margin-top: 1.5em;
+}
+
+.heading-first-name {
+	color: #fdd800;
+	font-weight: bold;
+}
+
+.heading-last-name {
+	font-weight: 300;
+}
+
+.main-heading-subtitle {
+	font-size: 2em;
+	color: #424242;
+}
+
+/*
+ * From https://www.steckinsights.com/shorten-length-border-bottom-pure-css/
+ */
+.main-heading-subtitle:after {
+	content: "";
+	display: block;
+	margin: 0 0 2.7em;
+	width: 45%;
+	padding-top: 20px;
+	border-bottom: 2px solid #fdd800;
+}
+
+.main-article-heading {
+	font-size: 2em;
+	text-transform: uppercase;
+}
+
+.main-article-heading-icon {
+	color: #fdd800;
+	margin: auto 0.8em 0 auto;
+}
+
+.main-article-heading:after {
+	content: "";
+	display: block;
+	margin: 0 0;
+	width: 100%;
+	padding-top: 20px;
+	border-bottom: 2px solid #fdd800;
 }

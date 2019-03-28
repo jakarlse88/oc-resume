@@ -7,7 +7,10 @@ const _render = (template, node) => {
 const _renderHeading = data => {
 	const element = document.querySelector("#header");
 
-	const template = `<h1>${data.name}</h1><p>${data.title}</p>`;
+	const template = `<h1 class="main-heading">
+    <span class="heading-first-name">${data.firstName}</span>
+    <span class="heading-last-name">${data.lastName}</span>
+    </h1><p class="main-heading-subtitle">${data.title}</p>`;
 
 	_render(template, element);
 };
@@ -16,8 +19,10 @@ const _renderEducation = data => {
 	const element = document.querySelector("#education");
 
 	let template = `<header class="article-header">
-            <h2 class="article-heading">
-                Education
+    
+            <h2 class="main-article-heading">
+            <i class="fas fa-graduation-cap main-article-heading-icon"></i>    
+            Education
             </h2>
         </header>`;
 
@@ -50,7 +55,8 @@ const _renderExperience = data => {
 	const element = document.querySelector("#experience");
 
 	let template = `<header class="article-header">
-            <h2 class="article-heading">
+            <h2 class="main-article-heading">
+            <i class="fas fa-briefcase main-article-heading-icon"></i>
                 Experience
             </h2>
         </header>`;
@@ -84,7 +90,8 @@ const _renderReferences = data => {
 	const element = document.querySelector("#references");
 
 	let template = `<header class="article-header">
-            <h2 class="article-heading" id="references-heading">
+            <h2 class="main-article-heading" id="references-heading">
+                <i class="fas fa-pencil-alt main-article-heading-icon"></i>    
                 References
             </h2>
         </header>
@@ -126,7 +133,7 @@ const _renderContactInfo = data => {
 		const heading = item.charAt(0).toUpperCase() + item.substr(1);
 		const text = data[item];
 
-		template += `<h5>${heading}</h5><p>${text}</p>`;
+		template += `<h5 class="contact-subheading">${heading}</h5><p class="contact-paragraph">${text}</p>`;
 	});
 
 	template += `</div>`;
