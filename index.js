@@ -1,23 +1,30 @@
+/*
+ * Vanilla JS template render function
+ * https://gomakethings.com/rendering-content-with-vanilla-javascript/
+ */
+
 const _render = (template, node) => {
 	if (!node) return;
 
 	node.innerHTML = template;
 };
 
-const _renderHeading = data => {
-	const element = document.querySelector("#header");
+/*
+ * Syntactic sugar for document.querySelector()
+ * https://dev.to/mrahmadawais/use-instead-of-document-queryselector-all-in-javascript-without-jquery-3ef1
+ */
+const $ = document.querySelector.bind(document);
 
+const _renderHeading = data => {
 	const template = `<h1 class="main-heading">
     <span class="heading-first-name">${data.firstName}</span>
     <span class="heading-last-name">${data.lastName}</span>
     </h1><p class="main-heading-subtitle">${data.title}</p>`;
 
-	_render(template, element);
+	_render(template, $("#header"));
 };
 
 const _renderEducation = data => {
-	const element = document.querySelector("#education");
-
 	let template = `<header class="article-header">
     
             <h2 class="main-article-heading">
@@ -57,12 +64,10 @@ const _renderEducation = data => {
         `;
 	});
 
-	_render(template, element);
+	_render(template, $("#education"));
 };
 
 const _renderExperience = data => {
-	const element = document.querySelector("#experience");
-
 	let template = `<header class="article-header">
             <h2 class="main-article-heading">
             <i class="fas fa-briefcase main-article-heading-icon"></i>
@@ -100,12 +105,10 @@ const _renderExperience = data => {
         `;
 	});
 
-	_render(template, element);
+	_render(template, $("#experience"));
 };
 
 const _renderReferences = data => {
-	const element = document.querySelector("#references");
-
 	let template = `<header class="article-header">
             <h2 class="main-article-heading" id="references-heading">
                 <i class="fas fa-pencil-alt main-article-heading-icon"></i>    
@@ -126,25 +129,20 @@ const _renderReferences = data => {
 
 	template += "</div>";
 
-	_render(template, element);
+	_render(template, $("#references"));
 };
 
 const _renderAvatar = data => {
-	const element = document.querySelector("#avatar-container");
-
 	const template = `<img src="${
 		data.avatar
 	}" alt="Image of Jon Karlsen" class="avatar" />`;
 
-	_render(template, element);
+	_render(template, $("#avatar-container"));
 };
 
 const _renderContactInfo = data => {
-	const element = document.querySelector("#bio-contact");
-
-	let template = `<h2 class="sidebar-heading">Contact</h2>`;
-
-	template += `<div aria-hidden="true" class="bio-contact-container">`;
+	let template = `<h2 class="sidebar-heading">Contact</h2>
+		<div aria-hidden="true" class="bio-contact-container">`;
 
 	Object.keys(data).forEach(item => {
 		const heading = item.charAt(0).toUpperCase() + item.substr(1);
@@ -155,24 +153,20 @@ const _renderContactInfo = data => {
 
 	template += `</div>`;
 
-	_render(template, element);
+	_render(template, $("#bio-contact"));
 };
 
 const _renderAboutMe = data => {
-	const element = document.querySelector("#bio-about");
-
 	let template = `<h2 class="sidebar-heading">About Me</h2>`;
 
 	template += `<div aria-hidden="true" class="bio-about-container"><p>${
 		data.aboutMe
 	}</p></div>`;
 
-	_render(template, element);
+	_render(template, $("#bio-about"));
 };
 
 const _renderHobbies = data => {
-	const element = document.querySelector("#bio-hobbies");
-
 	let template = `<div class="hobbies-container" aria-hidden="true">
             <h2 class="sidebar-heading">Hobbies</h2>
             <div class="icon-container" aria-hidden="true">
@@ -184,7 +178,7 @@ const _renderHobbies = data => {
 
 	template += `</div></div>`;
 
-	_render(template, element);
+	_render(template, $("#bio-hobbies"));
 };
 
 const renderContents = (function(data) {
