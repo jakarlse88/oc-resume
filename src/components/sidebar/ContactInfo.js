@@ -22,7 +22,11 @@ const ContactInfo = props => {
 			<h2 className="sidebar-heading">Contact</h2>
 			<div aria-hidden="true" className="bio-contact-container">
 				{contactItemList.map(item => (
-					<ContactItem heading={item.heading} text={item.text} />
+					<ContactItem
+						heading={item.heading}
+						text={item.text}
+						key={item.heading}
+					/>
 				))}
 			</div>
 		</div>

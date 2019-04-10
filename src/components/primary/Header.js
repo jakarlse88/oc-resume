@@ -5,11 +5,11 @@ const Header = props => {
 
 	return (
 		<header>
-			<h1 class="main-heading">
-				<span class="heading-first-name">{firstName}</span>
-				<span class="heading-last-name">{lastName}</span>
+			<h1 className="main-heading">
+				<span className="heading-first-name">{firstName}</span>
+				<span className="heading-last-name">{lastName}</span>
 			</h1>
-			<p class="main-heading-subtitle">{title}</p>
+			<p className="main-heading-subtitle">{title}</p>
 		</header>
 	);
 };

@@ -6,7 +6,10 @@ const HobbyInfo = props => (
 			<h2 className="sidebar-heading">Hobbies</h2>
 			<div className="icon-container" aria-hidden="true">
 				{props.hobbies.map(item => (
-					<i class={`fa fa-3x ${item} hobby-icon`} />
+					<i
+						className={`fa fa-3x ${item} hobby-icon`}
+						key={item}
+					/>
 				))}
 			</div>
 		</div>

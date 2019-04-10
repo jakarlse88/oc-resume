@@ -13,7 +13,7 @@ const References = props => {
 			</header>
 			<div className="references-container" aria-hidden="true">
 				{props.references.map(item => (
-					<article className="reference-item">
+					<article className="reference-item" key={item.name}>
 						<p className="reference-name">{item.name}</p>
 						<p className="reference-info">{item.title}</p>
 						<p className="reference-info">{item.phone}</p>

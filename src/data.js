@@ -2,75 +2,75 @@ const data = {
 	education: [
 		{
 			institution: "OpenClassrooms",
-			subheading: "Back-End Web Developer: .NET",
+			subheading: "Back-End Developer: .NET",
 			bodyText:
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+				"Back-end development using Microsoft's .NET framework with C# to build web applications.",
 			articleDate: {
 				date: "2019-2020",
 				place: "Oslo, Norway"
 			}
 		},
 		{
-			institution: "OpenClassrooms",
-			subheading: "Back-End Web Developer: .NET",
+			institution: "Udacity",
+			subheading: "Front-End Developer Nanodegree",
 			bodyText:
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+				"Front-end web development using HTML, CSS, and JavaScript, as well as frameworks like Bootstrap and React/Redux.",
 			articleDate: {
-				date: "2019-2020",
+				date: "2018-2018",
 				place: "Oslo, Norway"
 			}
 		}
 	],
 	experience: [
 		{
-			institution: "OpenClassrooms",
-			subheading: "Back-End Web Developer: .NET",
+			institution: "Moss Taekwondo Club",
+			subheading: "Chief Instructor",
 			bodyText:
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+				"Taught and mentored athletes of all ages and levels. Implemented a curriculum based on international guidelines, organised and oversaw events such as training camps and grade tests, advised prospective athletes/parents, and co-operated closely with management to deliver a fantastic experience.",
 			articleDate: {
-				date: "2019-2020",
-				place: "Oslo, Norway"
+				date: "2016-current",
+				place: "Moss, Norway"
 			}
 		},
 		{
-			institution: "OpenClassrooms",
-			subheading: "Back-End Web Developer: .NET",
+			institution: "Fagmøbler (furniture)",
+			subheading: "Sales Representative",
 			bodyText:
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+				"Advised and helped customers, and in general helped with the daily running of the store.",
 			articleDate: {
-				date: "2019-2020",
-				place: "Oslo, Norway"
+				date: "2015-2016",
+				place: "Moss, Norway"
 			}
 		}
 	],
 	references: [
 		{
-			name: "John Smith",
-			title: "Director - ACME, Inc.",
-			phone: "111 222 333",
-			email: "john.smith@acme.com"
+			name: "Jørn Bakken",
+			title: "Director - Moss Taekwondo Club.",
+			phone: "951 62 501",
+			email: "bakken72@gmail.com"
 		},
 		{
-			name: "John Smith",
-			title: "Director - ACME, Inc.",
-			phone: "111 222 333",
-			email: "john.smith@acme.com"
+			name: "Jon L. Løbak",
+			title: "Teacher - Hadeland Folk High School",
+			phone: "936 26 628",
+			email: "jonloebak@hotmail.com"
 		}
 	],
 	biography: {
 		firstName: "Jon",
 		lastName: "Karlsen",
-		title: "Back-End Web Developer",
+		title: "Web Developer",
 		avatar: "https://via.placeholder.com/250",
 		contact: {
-			address: "Somewheretown, Europe",
-			phone: "+47 123 45 678",
-			email: "jon@somewhere.com",
+			address: "Moss, Norway",
+			phone: "+47 976 13 293",
+			email: "karlsen.jonarild@gmail.com",
 			website: "github.com/jakarlse88",
-			skype: "@jon"
+			linkedIn: "linkedin.com/in/jon-karlsen/"
 		},
 		aboutMe:
-			"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil, corporis dolores doloribus id quo soluta a aliquid temporibus dolore recusandae, non voluptates dolor tenetur, cupiditate optio rerum maiores sit? Voluptatum qui ex, consectetur unde deleniti earum porro ad voluptatem deserunt ratione temporibus sit illo vel. Nulla sint quidem ipsum tenetur?",
+			"Ambitious full-stack web developer offering enthusiasm and understanding of various programming languages and frameworks. Passionate, driven, and motivated by challenge. Extensive experience with teaching and mentoring students ranging from children to adults and from beginner to advanced levels, and strongly motivated by working closely with people to help both parties grow beyond imagined limits. Genuinely love motivating and supporting both students and myself to refocus and work through difficulties.",
 		hobbies: ["fa-running", "fa-book", "fa-laptop-code"]
 	}
 };

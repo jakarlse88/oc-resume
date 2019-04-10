@@ -12,7 +12,7 @@ const Experience = props => {
 				</header>
 
 				{props.experience.map((item, index) => (
-					<article className="article">
+					<article className="article" key={item.institution}>
 						<div aria-hidden="true" className="article-icon">
 							{index === 0 ? (
 								<i className="far fa-dot-circle" />
